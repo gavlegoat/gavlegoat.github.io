@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Greg Anderson</title>
+    <link>https://gavlegoat.github.io/</link>
+    <description>Recent content in About on Greg Anderson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Research</title>
+      <link>https://gavlegoat.github.io/research/</link>
+      <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/research/</guid>
+      <description>My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&amp;rsquo;19).
+In addition, I have also done some work on using machine learning to improve program analysis and program synthesis tools. For example, the aformentioned PLDI paper used machine learning to figure out how to perform abstraction refinement.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://gavlegoat.github.io/publications/</link>
+      <pubDate>Fri, 14 Jun 2019 11:06:23 -0500</pubDate>
+      
+      <guid>https://gavlegoat.github.io/publications/</guid>
+      <description>Optimization and Abstraction: A Synergistic Approach for Analyzing Neural Network Robustness. Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri. To appear at PLDI&amp;rsquo;19.
+Learning Abstractions for Program Synthesis. Xinyu Wang, Greg Anderson, Isil Dillig, Ken McMillan. At CAV&amp;rsquo;18.</description>
+    </item>
+    
+  </channel>
+</rss>

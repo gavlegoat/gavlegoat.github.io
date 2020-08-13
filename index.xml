@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on Greg Anderson</title>
+    <title>Greg Anderson</title>
     <link>https://gavlegoat.github.io/</link>
-    <description>Recent content in About on Greg Anderson</description>
+    <description>Recent content on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <language>en</language>
     
 	<atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +16,7 @@
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://gavlegoat.github.io/research/</guid>
-      <description>My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&amp;rsquo;19).
+      <description>My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&#39;19).
 In addition, I have also done some work on using machine learning to improve program analysis and program synthesis tools. For example, the aformentioned PLDI paper used machine learning to figure out how to perform abstraction refinement.</description>
     </item>
     
@@ -27,8 +26,18 @@ In addition, I have also done some work on using machine learning to improve pro
       <pubDate>Fri, 14 Jun 2019 11:06:23 -0500</pubDate>
       
       <guid>https://gavlegoat.github.io/publications/</guid>
-      <description>Optimization and Abstraction: A Synergistic Approach for Analyzing Neural Network Robustness. Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri. At PLDI&amp;rsquo;19 (Distinguished Paper). Tool available here.
-Learning Abstractions for Program Synthesis. Xinyu Wang, Greg Anderson, Isil Dillig, Ken McMillan. At CAV&amp;rsquo;18.</description>
+      <description>Optimization and Abstraction: A Synergistic Approach for Analyzing Neural Network Robustness. Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri. At PLDI&#39;19 (Distinguished Paper). Tool available here.
+Learning Abstractions for Program Synthesis. Xinyu Wang, Greg Anderson, Isil Dillig, Ken McMillan. At CAV&#39;18.
+Formal Analysis of the Compact Position Reporting Algorithm. Aaron Dutle, Mariano Moscato, Laura Titolo, César Muñoz, Gregory Anderson, and François Bobot. Formal Aspects of Computing. 2020.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://gavlegoat.github.io/about/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/about/</guid>
+      <description>I&amp;rsquo;m a 3rdyear PhD student at UT Austin&amp;rsquo;s UToPiA group, advised by Isil Dillig and Swarat Chaudhuri. My research focuses on the intersection of program analysis and machine learning. Specifically, I&amp;rsquo;m interested in developing tools and techniques which can analyze machine learning systems to guarantee safety. Before joining the UToPiA group I received my BS in Computer Engineering and Mathematics from the University of Virginia.</description>
     </item>
     
   </channel>

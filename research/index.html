@@ -1,239 +1,163 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    
-    
+<html lang="en">
 
-
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
+  <head>
     <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Greg Anderson">
+    <meta name="description" content="My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&#39;19).
+In addition, I have also done some work on using machine learning to improve program analysis and program synthesis tools. For example, the aformentioned PLDI paper used machine learning to figure out how to perform abstraction refinement.">
+    <meta name="keywords" content="">
 
     
-    
-    
 
-<title>Research • Greg Anderson</title>
-
-
-<meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Research"/>
-<meta name="twitter:description" content="My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&rsquo;19).
+<meta name="twitter:description" content="My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&#39;19).
 In addition, I have also done some work on using machine learning to improve program analysis and program synthesis tools. For example, the aformentioned PLDI paper used machine learning to figure out how to perform abstraction refinement."/>
 
-<meta property="og:title" content="Research" />
-<meta property="og:description" content="My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&rsquo;19).
+    <meta property="og:title" content="Research" />
+<meta property="og:description" content="My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. So far, my work in this domain has focused on using abstraction refinement to prove local robustness properties (PLDI&#39;19).
 In addition, I have also done some work on using machine learning to improve program analysis and program synthesis tools. For example, the aformentioned PLDI paper used machine learning to figure out how to perform abstraction refinement." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gavlegoat.github.io/research/" />
-<meta property="article:published_time" content="2019-06-16T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-06-16T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2019-06-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-06-16T00:00:00+00:00" />
 
 
     
-
-
-
-
-
-
-<link rel="stylesheet" href="https://gavlegoat.github.io/scss/hyde-hyde.9181f25ed2263aeb878ec6f8a84f10c4ebb16150000fca8767308880bdde5ca0.css" integrity="sha256-kYHyXtImOuuHjsb4qE8QxOuxYVAAD8qHZzCIgL3eXKA=">
-
-
-<link rel="stylesheet" href="https://gavlegoat.github.io/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
+      <base href="https://gavlegoat.github.io/research/">
     
-    
-</head>
+    <title>
+  Research · Greg Anderson
+</title>
 
-
-    <body class=" ">
     
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://gavlegoat.github.io/">Greg Anderson</a>
+      <link rel="canonical" href="https://gavlegoat.github.io/research/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://gavlegoat.github.io/css/coder.min.0e5ce5b959a68dfe0232c6ddcec1e8ef154517c968464707f3181c437fe611c0.css" integrity="sha256-DlzluVmmjf4CMsbdzsHo7xVFF8loRkcH8xgcQ3/mEcA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://gavlegoat.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://gavlegoat.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://gavlegoat.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=""
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://gavlegoat.github.io/">
+      Greg Anderson
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
       </span>
-      
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/research/">Research</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/publications/">Publications</a>
+            </li>
+          
         
         
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
         
-        <div class="author-image">
-          <img src="https://gavlegoat.github.io/img/me.jpg" alt="Author Image" class="img--circle img--headshot element--center">
-        </div>
-        
-      
-      
-      
-        <div class="email-link">
-          <a href="mailto:ganderso@cs.utexas.edu" rel="me">ganderso@cs.utexas.edu</a>
-        </div>
-      
-      <p class="site__description">
-        
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Greg Anderson</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://gavlegoat.github.io/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://gavlegoat.github.io/research/">
-						<span>Research</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://gavlegoat.github.io/publications/">
-						<span>Publications</span>
-					</a>
-				</li>
-			 
-		
-		</li>
-	</ul>
-</div>
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Research</h1>
+    </header>
 
-        <section class="social">
-  Contact me: 
-	
-	
-	
-	<a href="https://github.com/gavlegoat" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<a href="mailto:ganderso@cs.utexas.edu" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
-	
-</section>
-
-      </div>
-    </div>
-    
-<div class="copyright">
-  &copy; 2020 Greg Anderson
-  
-</div>
-
-
-<div class="builtwith">
-Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
-</div>
-
-
-  </div>
-</div>
-
-        <div class="content container">
-            
-    
-<article>
-  <header>
-    <h1>Research</h1>
-    
-    
-<div class="post__meta">
-    
-    
-    
-    
-    
-    
-    <br/>
-    
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
     <p>My research broadly covers the intersection of programming languages and
 machine learning. In particular, I am most interested in developing techniques
 for proving the safety of systems with machine learning components. So far, my
 work in this domain has focused on using abstraction refinement to prove local
-robustness properties (<a href="https://gavlegoat.github.io/papers/charon-pldi-19.pdf">PLDI&rsquo;19</a>).</p>
-
+robustness properties (<a href="https://gavlegoat.github.io/papers/charon-pldi-19.pdf">PLDI'19</a>).</p>
 <p>In addition, I have also done some work on using machine learning to improve
 program analysis and program synthesis tools. For example, the aformentioned
 PLDI paper used machine learning to figure out how to perform abstraction
 refinement. Before that I worked on a system which uses machine learning to
 automatically learn appropriate predicates for a predicate abstraction based
-synthesis tool (<a href="https://gavlegoat.github.io/papers/atlas-cav-18.pdf">CAV&rsquo;18</a>).</p>
+synthesis tool (<a href="https://gavlegoat.github.io/papers/atlas-cav-18.pdf">CAV'18</a>).</p>
 
-  </div>
-  
-
-
-  
+  </article>
+</section>
 
   
-    
 
+      </div>
 
-</article>
-
-
-        </div>
-        
-    
-
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
-
+      
+    </main>
 
     
+      
+      <script src="https://gavlegoat.github.io/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
     
-    <script type="text/javascript">
-        
-        hljs.initHighlightingOnLoad();
-    </script>
-    
-
-
-
 
     
 
+    
 
+    
 
-    </body>
+    
+
+  </body>
+
 </html>

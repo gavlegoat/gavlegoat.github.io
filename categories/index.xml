@@ -5,10 +5,6 @@
     <link>https://gavlegoat.github.io/categories/</link>
     <description>Recent content in Categories on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://gavlegoat.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://gavlegoat.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

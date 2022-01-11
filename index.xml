@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>CS342: Neural Networks</title>
+      <link>https://gavlegoat.github.io/cs342/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/</guid>
+      <description>In this course, we discuss the basics of deep neural networks. We will look at different neural architectures, as well as how to train, tune, and test networks. We will cover both the theory and practice of deep learning, using hands-on implementations in PyTorch. We will then briefly look at a number of common applications of deep learning including computer vision, sequence modeling, deep reinforcement learning, and generative modeling. Over the course of the homework assignments, we will develop a vision system for a racing simulator, SuperTuxKart.</description>
+    </item>
+    
+    <item>
       <title>Research</title>
       <link>https://gavlegoat.github.io/research/</link>
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>

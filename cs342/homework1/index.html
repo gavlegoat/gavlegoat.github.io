@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Greg Anderson">
+    <meta name="description" content="In this first homework, you will be training a deep network to classify images from SuperTuxKart.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Running on Google Colab For this assignment, as well as future assignments, you may want access to a GPU to train your models more quickly.">
+    <meta name="keywords" content="">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Homework 1"/>
+<meta name="twitter:description" content="In this first homework, you will be training a deep network to classify images from SuperTuxKart.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Running on Google Colab For this assignment, as well as future assignments, you may want access to a GPU to train your models more quickly."/>
+
+    <meta property="og:title" content="Homework 1" />
+<meta property="og:description" content="In this first homework, you will be training a deep network to classify images from SuperTuxKart.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Running on Google Colab For this assignment, as well as future assignments, you may want access to a GPU to train your models more quickly." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavlegoat.github.io/cs342/homework1/" />
+<meta property="article:published_time" content="2022-01-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-25T00:00:00+00:00" />
+
+
+    
+      <base href="https://gavlegoat.github.io/cs342/homework1/">
+    
+    <title>
+  Homework 1 · Greg Anderson
+</title>
+
+    
+      <link rel="canonical" href="https://gavlegoat.github.io/cs342/homework1/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://gavlegoat.github.io/css/coder.min.0e5ce5b959a68dfe0232c6ddcec1e8ef154517c968464707f3181c437fe611c0.css" integrity="sha256-DlzluVmmjf4CMsbdzsHo7xVFF8loRkcH8xgcQ3/mEcA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://gavlegoat.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://gavlegoat.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://gavlegoat.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.76.5" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=""
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://gavlegoat.github.io/">
+      Greg Anderson
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
+      </span>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/research/">Research</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/publications/">Publications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/cs342/">CS342</a>
+            </li>
+          
+        
+        
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Homework 1</h1>
+    </header>
+
+    <p>In this first homework, you will be training a deep network to classify images
+from SuperTuxKart.</p>
+<p>This assignment, as with all of the homework assignments, should be completed
+individually without sharing solutions, models, or ideas with other students.
+See details at the bottom of this page.</p>
+<h1 id="running-on-google-colab">Running on Google Colab</h1>
+<p>For this assignment, as well as future assignments, you may want access to a
+GPU to train your models more quickly. You can get access to a GPU through
+Google Colab using the following iPython notebooks:</p>
+<ul>
+<li><a href="https://gavlegoat.github.io/cs342-notebooks/cs342_colab_verbose.ipynb">An extensive one</a>, for the first couple times you use Colab, or</li>
+<li><a href="https://gavlegoat.github.io/cs342-notebooks/cs342_colab_short.ipynb">A pared-down one</a> to use once you are comfortable with the workflow.</li>
+</ul>
+<p>In order to use these notebooks, go to
+<a href="http://colab.research.google.com">http://colab.research.google.com</a>, sign in,
+then select upload. Upload the notebook you want to use, then follow the
+instructions in the notebook.</p>
+<h1 id="code">Code</h1>
+<p>We provide some starter code for this homework
+<a href="https://gavlegoat.github.io/cs342-homeworks/hw1.zip">here</a>. This zip file contains the following:</p>
+<ul>
+<li><code>bundle.py</code>, a script you can use to zip up your homework for submission. In
+order to submit your homework, run <code>python bundle.py homework &lt;uteid&gt;</code> which
+will create a file called <code>&lt;uteid&gt;.zip</code>. This is the file you should submit.</li>
+<li><code>grader</code> contains a local grader which you can use to evaluate your homework
+and see what grade you would currently get. Note that the local grader and
+our grader use different test sets, so this grader is not guaranteed to be
+100% accurate.</li>
+<li><code>homework</code> contains the code you will modify for this assignment.</li>
+<li><code>data</code> is a placeholder which will be replaced by the dataset for this
+assignment.</li>
+</ul>
+<p>You can run the local grader at any time by using the following command:</p>
+<pre><code>python -m grader homework -v
+</code></pre>
+<p>You will need to separately download the <a href="https://drive.google.com/a/utexas.edu/file/d/1Gg-SblaraCKqypAKtmrGEO3wgR8uaYaL">SuperTuxKart dataset</a>.
+You can unzip that file into the root directory to replace the existing data
+folder. After unzipping you should see subfolders <code>train</code> and <code>valid</code> inside
+the data folder. The reason the data is provided separately is because we will
+use this dataset for future homeworks as well. In those assignments you can
+simply symlink the data folder in order to avoid wasting storage space.</p>
+<h2 id="data-loader-15-pts">Data Loader (15 pts)</h2>
+<p>The first thing you will need to do is finish implementing the data loader for
+the SuperTuxCart dataset. Inside <code>homework/utils.py</code>, you will find the
+<code>SuperTuxDataset</code> class. You will need to implement the following methods:</p>
+<ul>
+<li><code>__init__</code> should initialize the dataset.</li>
+<li><code>__len__</code> should return the size of the dataset.</li>
+<li><code>__getitem__</code> should return a tuple of image, label. The image should be a
+tuple of shape <code>(3, 64, 64)</code> while the label should be an integer. Note that
+each pixel value should be normalized to the range [0, 1]</li>
+</ul>
+<p>The labels for each image are saved in <code>labels.csv</code>. This is a CSV file with
+headers <code>file</code> and <code>label</code> where <code>file</code> indiates a filename and <code>label</code> holds
+the corresponding label. There are six labels for this dataset. Note that in
+order for the grader to work, you should use the following map from text labels
+to integers: background - 0, kart - 1, pickup - 2, nitro - 3, bomb - 4, and
+projectile - 5.</p>
+<p>Once you have finished implementing the data loader, try running</p>
+<pre><code>python -m homework.visualize_data data/valid
+</code></pre>
+<p>in order to visualize a few images from each class.</p>
+<p>Here are a few hints for this section:</p>
+<ul>
+<li>The Python standard library includes the <code>csv</code> package, which can be used to
+easily read CSV files.</li>
+<li>Remember from class that <code>torchvision.transforms.ToTensor()</code> can help you
+convert a <code>PIL</code>/<code>Pillow</code> image to a tensor.</li>
+<li>There are at least two ways to implement the data loader: You can load all of
+the data in <code>__init__</code> or you can load datapoints one at a time in
+<code>__getitem__</code>. If you load all of the data up front, remember to convert them
+to tensors in order to avoid an OS error for having too many open files.</li>
+</ul>
+<p>Some documentation you might find useful:</p>
+<ul>
+<li><a href="https://pytorch.org/vision/stable/transforms.html#torchvision.transforms.ToTensor">torchvision.transforms.ToTensor</a></li>
+<li><a href="https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset">torch.utils.data.Dataset</a></li>
+<li><a href="https://docs.python.org/3/library/csv.html">csv</a>, particularly csv.reader</li>
+<li><a href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.open">PIL.Image.open</a></li>
+</ul>
+<h2 id="linear-model-15-pts">Linear Model (15 pts)</h2>
+<p>For this section, you will implement the <code>LinearClassifier</code> class in
+<code>homework/models.py</code>. You will define the model architecture in the <code>__init__</code>
+function, then implement <code>forward</code>. The <code>forward</code> function should take a <code>(B, 3, 64, 64)</code> tensor as input and return a <code>(B, 6)</code> tensor as output, where each
+input image is associated with a value for each class.</p>
+<p>You will receive the full 15 points for this section simply for defining the
+model &ndash; these points do not depend on accuracy or training.</p>
+<p>Some documentation:</p>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear">torch.nn.Linear</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.Tensor.view.html#torch.Tensor.view">torch.Tensor.view</a></li>
+</ul>
+<h2 id="loss-function-10-pts">Loss Function (10 pts)</h2>
+<p>In this section, you will add a loss function which can be used to train your
+model. To do this, implement the <code>ClassificationLoss</code> class in
+<code>homework/models.py</code>. This loss should be the negative log-likelihood of a
+softmax classifier:</p>
+<p><img src="https://gavlegoat.github.io/cs342-res/log-likelihood.png" alt="-log(exp(x\_l) / (sum\_j exp(x\_j)))"></p>
+<p>You can do this using existing PyTorch functions. Take a look in
+<a href="https://pytorch.org/docs/stable/nn.functional.html">torch.nn.functional</a>.</p>
+<h2 id="training-the-linear-model-30-pts">Training the Linear Model (30 pts)</h2>
+<p>Now we are ready to implement the training procedure for your linear model. To
+do this, you will need to</p>
+<ul>
+<li>create a model, a loss, and an optimizer;</li>
+<li>load the data;</li>
+<li>run several epochs of SGD; and</li>
+<li>save your model with <code>save_model</code></li>
+</ul>
+<p>There is a skeleton for this procedure in <code>homework/train.py</code>. Once you are
+ready to train, you can run your code with</p>
+<pre><code>python -m homework.train -m linear
+</code></pre>
+<p>A couple of hints:</p>
+<ul>
+<li>You may want to use <code>ArgumentParser</code> to add some hyperparameters to the
+command line so you can quickly experiment with them.</li>
+<li>You may wish to load and continue training with an existing model. See the
+<code>load_model</code> function.</li>
+<li>Write your training code in a way that works with any model. We will use it
+with a different model in the next section.</li>
+</ul>
+<p>Some documentation:</p>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer">torch.optim.Optimizer</a></li>
+<li><a href="https://pytorch.org/docs/stable/optim.html#torch.optim.SGD">torch.optim.SGD</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.Tensor.backward.html#torch.Tensor.backward">torch.Tensor.backward</a></li>
+</ul>
+<h2 id="mlp-model">MLP Model</h2>
+<p>In this section we will switch out the linear model for a more powerful
+multi-layer perceptron model. Implement the <code>MLPClassifier</code> class in
+<code>homework/models.py</code>. This class has the same interface as <code>LinearClassifier</code>.</p>
+<p>Now train the model with</p>
+<pre><code>python -m homework.train -m mlp
+</code></pre>
+<p>Some hints:</p>
+<ul>
+<li>You may need to tune your training code. Try moving hyperparameters to the
+<code>ArgumentParser</code>.</li>
+<li>Use ReLU as your nonlinearities.</li>
+<li>Two layers is enough for this assignment.</li>
+<li>Keeping the first layer small reduces the number of parameters.</li>
+</ul>
+<p>Some documentation:</p>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU">torch.nn.ReLU</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential">torch.nn.Sequential</a></li>
+</ul>
+<h1 id="grading">Grading</h1>
+<p>The test grader can be run with</p>
+<pre><code>python -m grader homework -v
+</code></pre>
+<p>Note that this grader is using a different set of test data than we use for our
+grader, so there may be some difference between the two. The distributions will
+be the same so your grade should be similar between the two graders, unless the
+model is massively overfit to the validation set.</p>
+<h1 id="submission">Submission</h1>
+<p>Once you are ready to submit, create a bundle by running</p>
+<pre><code>python bundle.py homework &lt;eid&gt;
+</code></pre>
+<p>then submit the resulting zip file on Canvas. Note that the grader has a
+maximum file size limit of 20MB. You shouldn&rsquo;t run into this limit unless your
+models are much larger than they need to be. You can check that your homework
+was bundled properly by grading it again with</p>
+<pre><code>python -m grader &lt;eid&gt;.zip
+</code></pre>
+<h1 id="online-grader">Online Grader</h1>
+<p>The online grading system uses a slightly modified version of Python, so please
+make sure your code follows these rules:</p>
+<ul>
+<li>Do not use <code>exit</code> or <code>sys.exit</code> as this will likely crash the grader.</li>
+<li>Do not try to access files except for the ones provided with the homework zip
+file. Writing files is disabled.</li>
+<li>Network access is disabled in the grader. Make sure you are reading your
+dataset from the <code>data</code> folder rather than from a network connection
+somewhere.</li>
+<li>Do not fork or spawn new processes.</li>
+<li><code>print</code> and <code>sys.stdout.write</code> are ignored by the grader.</li>
+</ul>
+<h1 id="honor-code">Honor Code</h1>
+<p>You should do this homework individually. You are allowed to discuss high-level
+ideas and general structure with each other, but not specific details about
+code, architecture, or hyperparameters. You may consult online sources, but
+don&rsquo;t copy code directly from any posts you find. Cite any ideas you take from
+online sources in your code (include the full URL where you found the idea).
+You may refer to your own solutions or the master solutions to prior homework
+assignments from this class as well as any iPython notebooks from this class.
+<strong>Do not put your solution in a public place (e.g., a public GitHub repo)</strong>.</p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>This assignment is very lightly modified from one created by Philipp
+Krähenbühl.</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+    </main>
+
+    
+      
+      <script src="https://gavlegoat.github.io/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

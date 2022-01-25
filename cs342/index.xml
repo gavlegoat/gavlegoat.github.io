@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS342: Neural Networks on Greg Anderson</title>
+    <link>https://gavlegoat.github.io/cs342/</link>
+    <description>Recent content in CS342: Neural Networks on Greg Anderson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/cs342/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homework 1</title>
+      <link>https://gavlegoat.github.io/cs342/homework1/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/homework1/</guid>
+      <description>In this first homework, you will be training a deep network to classify images from SuperTuxKart.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Running on Google Colab For this assignment, as well as future assignments, you may want access to a GPU to train your models more quickly.</description>
+    </item>
+    
+  </channel>
+</rss>

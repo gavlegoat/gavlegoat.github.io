@@ -5,14 +5,17 @@
     <link>https://gavlegoat.github.io/</link>
     <description>Recent content on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CS342: Neural Networks</title>
-      <link>https://gavlegoat.github.io/cs342/</link>
-      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      <title>Homework 1</title>
+      <link>https://gavlegoat.github.io/cs342/homework1/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://gavlegoat.github.io/cs342/</guid>
-      <description>In this course, we discuss the basics of deep neural networks. We will look at different neural architectures, as well as how to train, tune, and test networks. We will cover both the theory and practice of deep learning, using hands-on implementations in PyTorch. We will then briefly look at a number of common applications of deep learning including computer vision, sequence modeling, deep reinforcement learning, and generative modeling. Over the course of the homework assignments, we will develop a vision system for a racing simulator, SuperTuxKart.</description>
+      <guid>https://gavlegoat.github.io/cs342/homework1/</guid>
+      <description>In this first homework, you will be training a deep network to classify images from SuperTuxKart.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Running on Google Colab For this assignment, as well as future assignments, you may want access to a GPU to train your models more quickly.</description>
     </item>
     
     <item>

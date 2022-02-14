@@ -6,7 +6,19 @@
     <description>Recent content on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homework 2</title>
+      <link>https://gavlegoat.github.io/cs342/homework2/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/homework2/</guid>
+      <description>For this homework, you will be classifying images from the SuperTuxKart dataset using a convolutional neural network.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Starter Code We provide some starter code for this homework here. This zip file contains the following:
+ bundle.py, a script you can use to zip up your homework for submission.</description>
+    </item>
+    
     <item>
       <title>Homework 1</title>
       <link>https://gavlegoat.github.io/cs342/homework1/</link>

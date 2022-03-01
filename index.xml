@@ -6,7 +6,17 @@
     <description>Recent content on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homework 3</title>
+      <link>https://gavlegoat.github.io/cs342/homework3/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/homework3/</guid>
+      <description>For this homework, we will really tune our SuperTuxKart classifier in order to push the accuracy as high as possible. We will then extend that classifier to label each pixel of the input rather than each input image as a whole.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.</description>
+    </item>
+    
     <item>
       <title>Homework 2</title>
       <link>https://gavlegoat.github.io/cs342/homework2/</link>

@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/cs342/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Homework 4</title>
+      <link>https://gavlegoat.github.io/cs342/homework4/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/homework4/</guid>
+      <description>In this homework, we will implement an object detector for the SuperTuxKart simulator. The goal is to look at an image and identify the locations of karts, bombs/projectiles, and pickup items. The dataset is the same as homework 3 and the starting code will look similar. You will need similar data augmentation to what you used in homework 3.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students.</description>
+    </item>
+    
+    <item>
       <title>Homework 3</title>
       <link>https://gavlegoat.github.io/cs342/homework3/</link>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>

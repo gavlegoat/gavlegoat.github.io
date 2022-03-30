@@ -196,7 +196,7 @@ implementations may be too slow.</li>
 you&rsquo;ll need to design and train a model which produces a heatmap that your peak
 extractor can work with.</p>
 <h2 id="heatmap-prediction">Heatmap Prediction</h2>
-<p>You should design a CNN model which takes an image as input and predicts a
+<p>You should design a FCN model which takes an image as input and predicts a
 separate heatmap for each class. (That is, your output should have shape <code>[B, C, H, W]</code> where <code>B</code> is the batch size <code>C</code> is the number of classes, <code>H</code> is the
 height of the input and <code>W</code> is the width of the input.) Each heatmap should
 consist of values in the interval [0, 1] where most values are close to zero,

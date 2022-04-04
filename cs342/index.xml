@@ -8,6 +8,17 @@
     <language>en</language>
     <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/cs342/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Homework 5</title>
+      <link>https://gavlegoat.github.io/cs342/homework5/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/homework5/</guid>
+      <description>In this homework, we will implement a CNN-based vision system for an autonomous driving agent in SuperTuxKart.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Setup and Starter Code Starter code for this assignment is provided here. For this assignment, you will also need to install python bindings for SuperTuxKart &amp;ndash; these are available in the pip package PySuperTuxKart.</description>
+    </item>
+    
+    <item>
       <title>Homework 4</title>
       <link>https://gavlegoat.github.io/cs342/homework4/</link>
       <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>

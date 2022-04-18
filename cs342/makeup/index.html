@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Greg Anderson">
+    <meta name="description" content="In this homework, we will look at character-level language models. These models take a sequence of characters as input and predict the next character.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Starter Code and Data Starter code for this assignment is available here. The starter code zip for this assignment includes the dataset you will need.">
+    <meta name="keywords" content="">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Make-Up Homework"/>
+<meta name="twitter:description" content="In this homework, we will look at character-level language models. These models take a sequence of characters as input and predict the next character.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Starter Code and Data Starter code for this assignment is available here. The starter code zip for this assignment includes the dataset you will need."/>
+
+    <meta property="og:title" content="Make-Up Homework" />
+<meta property="og:description" content="In this homework, we will look at character-level language models. These models take a sequence of characters as input and predict the next character.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Starter Code and Data Starter code for this assignment is available here. The starter code zip for this assignment includes the dataset you will need." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavlegoat.github.io/cs342/makeup/" />
+<meta property="article:published_time" content="2022-04-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-18T00:00:00+00:00" />
+
+
+    
+      <base href="https://gavlegoat.github.io/cs342/makeup/">
+    
+    <title>
+  Make-Up Homework · Greg Anderson
+</title>
+
+    
+      <link rel="canonical" href="https://gavlegoat.github.io/cs342/makeup/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://gavlegoat.github.io/css/coder.min.0e5ce5b959a68dfe0232c6ddcec1e8ef154517c968464707f3181c437fe611c0.css" integrity="sha256-DlzluVmmjf4CMsbdzsHo7xVFF8loRkcH8xgcQ3/mEcA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://gavlegoat.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://gavlegoat.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://gavlegoat.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.76.5" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=""
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://gavlegoat.github.io/">
+      Greg Anderson
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
+      </span>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/research/">Research</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/publications/">Publications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://gavlegoat.github.io/cs342/">CS342</a>
+            </li>
+          
+        
+        
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Make-Up Homework</h1>
+    </header>
+
+    <p>In this homework, we will look at character-level language models. These models
+take a sequence of characters as input and predict the next character.</p>
+<p>This assignment, as with all of the homework assignments, should be completed
+individually without sharing solutions, models, or ideas with other students.
+See details at the bottom of this page.</p>
+<h1 id="starter-code-and-data">Starter Code and Data</h1>
+<p>Starter code for this assignment is available <a href="https://gavlegoat.github.io/cs342-homeworks/extra.zip">here</a>.
+The starter code zip for this assignment includes the dataset you will need.</p>
+<p>For this assignment, we will use the transcripts of several speeches by Barack
+Obama. (We chose Obama because there are more publicly available speech
+transcripts than other presidents.) We&rsquo;ll be using a simplified character set
+consisting of only 26 letters (we do not distinguish between capital and
+lower-case letters), space and period.</p>
+<p>Inside <code>models.py</code> you will find the <code>LanguageModel</code> class. This is an abstract
+class representing the language modeling functionality you will be developing.
+Our language models work by predicting 28 probabilities &ndash; one for each
+character in our reduced character set. Effectively, the language model is a
+classifier over our character set. The <code>LanguageModel</code> class has two methods:
+<code>predict_all</code> takes a string <code>s</code> of length <code>n</code> and predicts the next character
+for each substring <code>s[:i]</code> for <code>i</code> from 0 to <code>n</code>. Note that this includes
+predicting next characters for the empty string <code>''</code> and the whole string <code>s</code>,
+so this method should return <code>n+1</code> values. The <code>predict_next</code> method takes a
+string and predicts just the next character for the entire string. This method
+is already implemented and it just calls <code>predict_all</code>.</p>
+<p>As a first step, the starter code includes a fully-implemented
+<a href="https://en.wikipedia.org/wiki/Bigram">Bigram</a> model as well as an adjacent
+language model which favors characters which are close in the alphabet to the
+current character. These models provide baselines you can compare your network
+to and test your work.</p>
+<p>You will also find <code>utils.py</code> which includes some useful functionality. The
+<code>SpeechDataset</code> class loads the speech data and the <code>one_hot</code> function converts
+a string into a one-hot encoding of characters with shape <code>(28, len(s))</code>. You
+can create a one-hot encoded dataset by calling
+<code>SpeechDataset('data/train.txt', transform=one_hot)</code>.</p>
+<p>The parts of this homework are largely indpendent, so feel free to skip around
+and do things in whatever order you like.</p>
+<h1 id="log-likelihood-of-text-10-pts">Log-likelihood of Text (10 pts)</h1>
+<p>In this section, you will implement <code>log_likelihood</code> in <code>language.py</code>. This
+function should take a model and a string as input and return the probability
+of generating that string under that model. You can use <code>Bigram</code> or
+<code>AdjacentLanguageModel</code> to test your function:</p>
+<pre><code>python -m homework.language -m Bigram
+</code></pre>
+<p>Hints:</p>
+<ul>
+<li>Remember that the language model can take an empty string as input.</li>
+<li>Remember that the model&rsquo;s <code>predict_all</code> method will return the
+log-probabilities of the next character of each prefix of the string.</li>
+<li>The log-likelihood is the <em>sum</em> of the log-likelihoods of each individual
+character, not the average or the product.</li>
+</ul>
+<h1 id="generating-text-10-pts">Generating Text (10 pts)</h1>
+<p>Now, we will implement <code>sample_random</code> in <code>language.py</code>. This function takes a
+language model as input and generates a string by repeatedly sampling according
+to the distribution generated by the model. (This is what we called &ldquo;sequential
+sampling&rdquo; in class.) The model should stop generating when <code>max_length</code>
+characters are produced or if the model produces a period.</p>
+<p>Hint: take a look at <code>torch.distributions</code> for some useful functionality
+related to sampling from distributions. The <code>Categorical</code> class may be
+particularly useful.</p>
+<p>Note that the text you generate may not look very good. Here is one output
+sampled from the temporal convolutional network in the master solution: &ldquo;some
+of a backnown my but or the understand thats why weve hardships not around work
+since there one they will be begin with consider daughters some as more a new
+but jig go atkeeral westedly.&rdquo;</p>
+<h1 id="beam-search-20-pts">Beam Search (20 pts)</h1>
+<p>Here we will implement a beam search in the <code>beam_search</code> function in
+<code>language.py</code>. Once again, the search terminates if the sequence reaches
+<code>max_length</code> characters or if a period is generated. The beam search should
+keep the top <code>beam_size</code> results at each step, and return the top <code>n_results</code>
+sequences at the end of the search. Sequences should be scored on one of two
+criteria: their overall log-likelihood (as in <code>log_likelihood</code>) if
+<code>average_log_likelihood=False</code> or the average per-character log likelihood if
+<code>average_log_likelihood=True</code>. In general, the per-character average will
+result in longer sequences while the overall log-likelihood will terminate
+after a relatively small number of words.</p>
+<p>Hint: Inside <code>language.py</code> you will find <code>TopNHeap</code>. This class will be useful
+to keep track of the best sequences during your search. Here are a coupl of
+samples from the master solution with <code>average_log_likelihood=False</code>:</p>
+<pre><code>thats.
+today.
+in.
+now.
+</code></pre>
+<p>And here are a few with <code>average_log_likelihood=True</code>:</p>
+<pre><code>and we will continue to make sure that we will continue to the united states of american.
+and we will continue to make sure that we will continue to the united states of the united states.
+and we will continue to make sure that we will continue to the united states of america.
+and thats why were going to make sure that will continue to the united states of america.
+</code></pre>
+<h1 id="temporal-convolutional-model-20-pts">Temporal Convolutional Model (20 pts)</h1>
+<p>In this section you will define a temporal convolutional network (TCN) to use
+for language modeling. For this, you will need to first define the
+<code>CausalConv1dBlock</code>, which combines a causal convolution with a nonlinearity.
+The main <code>TCN</code> function should use a stack of causal blocks with dilation to
+build a complete model. At the end of the model, you&rsquo;ll want to add a
+convolutional layer with a window size of 1 to produce the output. Then
+<code>TCN.predict_all</code> should use <code>TCN.forward</code> to predict the log-probabilies for
+an input sequence.</p>
+<p>Hints:</p>
+<ul>
+<li>Make sure <code>TCN.forward</code> works with batches of data.</li>
+<li>Make sure <code>TCN.predict_all</code> returns log-probabilities, <em>not</em> logits.</li>
+<li>Store the distribution over the first character in the sentence as a
+parameter of the model using <code>torch.nn.Parameter</code>.</li>
+<li>Try to keep the model relatively small. The master solution takes about 15
+minutes to train on a pretty good GPU. Yours make take a little longer, but
+it shouldn&rsquo;t need hours of training.</li>
+<li>Try adding a residual connection to the block.</li>
+</ul>
+<p>Relevant documentation:</p>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter">torch.nn.Parameter</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.functional.log_softmax.html#torch.nn.functional.log_softmax">torch.nn.functional.log_softmax</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.ConstantPad1d.html#torch.nn.ConstantPad1d">torch.nn.ConstantPad1d</a></li>
+</ul>
+<h1 id="tcn-training-40-pts">TCN Training (40 pts)</h1>
+<p>Train your TCN using <code>train.py</code>. You may want to reuse some training code from
+previous assignments.</p>
+<p>Hint: You may find SGD works better than Adam in this case, but you may also
+need a large learning rate (around 0.1).</p>
+<h1 id="grading">Grading</h1>
+<p>The validation grader can be run with</p>
+<pre><code>python -m grader homework -v
+</code></pre>
+<p>Note that this grader is using a different set of test data than we use for our
+grader, so there may be some difference between the two. The distributions will
+be the same so your grade should be similar between the two graders, unless the
+model is massively overfit to the validation set.</p>
+<h1 id="submission">Submission</h1>
+<p>Once you are ready to submit, create a bundle by running</p>
+<pre><code>python bundle.py homework &lt;eid&gt;
+</code></pre>
+<p>then submit the resulting zip file on Canvas. Note that the grader has a
+maximum file size limit of 20MB. You shouldn&rsquo;t run into this limit unless your
+models are much larger than they need to be. You can check that your homework
+was bundled properly by grading it again with</p>
+<pre><code>python -m grader &lt;eid&gt;.zip
+</code></pre>
+<h1 id="online-grader">Online Grader</h1>
+<p>The online grading system uses a slightly modified version of Python, so please
+make sure your code follows these rules:</p>
+<ul>
+<li>Do not use <code>exit</code> or <code>sys.exit</code> as this will likely crash the grader.</li>
+<li>Do not try to access files except for the ones provided with the homework zip
+file. Writing files is disabled.</li>
+<li>Network access is disabled in the grader. Make sure you are reading your
+dataset from the <code>data</code> folder rather than from a network connection
+somewhere.</li>
+<li>Do not fork or spawn new processes.</li>
+<li><code>print</code> and <code>sys.stdout.write</code> are ignored by the grader.</li>
+</ul>
+<h1 id="honor-code">Honor Code</h1>
+<p>You should do this homework individually. You are allowed to discuss high-level
+ideas and general structure with each other, but not specific details about
+code, architecture, or hyperparameters. You may consult online sources, but
+don&rsquo;t copy code directly from any posts you find. Cite any ideas you take from
+online sources in your code (include the full URL where you found the idea).
+You may refer to your own solutions or the master solutions to prior homework
+assignments from this class as well as any iPython notebooks from this class.
+<strong>Do not put your solution in a public place (e.g., a public GitHub repo)</strong>.</p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>This assignment is very lightly modified from one created by Philipp
+Krähenbühl.</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+    </main>
+
+    
+      
+      <script src="https://gavlegoat.github.io/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

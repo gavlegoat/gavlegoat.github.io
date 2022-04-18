@@ -6,7 +6,29 @@
     <description>Recent content on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Final Project</title>
+      <link>https://gavlegoat.github.io/cs342/final/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/final/</guid>
+      <description>In this project, you will implement an agent that plays the SuperTuxKart ice hockey game mode. You have two options for how to do this: an image-based agent or a state-based agent.
+Regardless of which agent you choose, your goal is to train the agent to score as many goals as possible in a 2 vs. 2 tournament against some existing agents.
+Note: In contrast to previous homeworks, you may work in groups of up to four students on this assignment.</description>
+    </item>
+    
+    <item>
+      <title>Make-Up Homework</title>
+      <link>https://gavlegoat.github.io/cs342/makeup/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gavlegoat.github.io/cs342/makeup/</guid>
+      <description>In this homework, we will look at character-level language models. These models take a sequence of characters as input and predict the next character.
+This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
+Starter Code and Data Starter code for this assignment is available here. The starter code zip for this assignment includes the dataset you will need.</description>
+    </item>
+    
     <item>
       <title>Homework 5</title>
       <link>https://gavlegoat.github.io/cs342/homework5/</link>

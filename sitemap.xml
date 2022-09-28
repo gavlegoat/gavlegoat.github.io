@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gavlegoat.github.io/about/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gavlegoat.github.io/cs342/final/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url>
@@ -55,11 +60,6 @@
   <url>
     <loc>https://gavlegoat.github.io/publications/</loc>
     <lastmod>2019-06-14T11:06:23-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gavlegoat.github.io/about/</loc>
-    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>

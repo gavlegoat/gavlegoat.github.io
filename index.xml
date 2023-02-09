@@ -107,10 +107,10 @@ Running on Google Colab For this assignment, as well as future assignments, you 
       <pubDate>Fri, 14 Jun 2019 11:06:23 -0500</pubDate>
       
       <guid>https://gavlegoat.github.io/publications/</guid>
-      <description>Guiding Safe Exploration with Weakest Preconditions. Greg Anderson, Swarat Chaudhuri, Isil Dillig. At ICLR &amp;lsquo;23. Tool available here.
+      <description>Policy Optimization with Robustness Certificates. Chenxi Yang, Greg Anderson, Swarat Chaudhuri.
+Guiding Safe Exploration with Weakest Preconditions. Greg Anderson, Swarat Chaudhuri, Isil Dillig. At ICLR &amp;lsquo;23. Tool available here.
 Neurosymbolic Reinforcement Learning with Formally Verified Exploration. Greg Anderson, Abhinav Verma, Isil Dillig, Swarat Chaudhuri. At NeurIPS &amp;lsquo;20. Tool available here.
-Optimization and Abstraction: A Synergistic Approach for Analyzing Neural Network Robustness. Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri. At PLDI&#39;19 (Distinguished Paper). Tool available here.
-Learning Abstractions for Program Synthesis.</description>
+Optimization and Abstraction: A Synergistic Approach for Analyzing Neural Network Robustness. Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri. At PLDI&#39;19 (Distinguished Paper).</description>
     </item>
     
   </channel>

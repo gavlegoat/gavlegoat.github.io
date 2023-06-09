@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Greg Anderson</title>
-    <link>https://gavlegoat.github.io/</link>
-    <description>Recent content on Greg Anderson</description>
+    <title>CS342: Neural Networks on Greg Anderson</title>
+    <link>https://gavlegoat.github.io/teaching/cs342/</link>
+    <description>Recent content in CS342: Neural Networks on Greg Anderson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://gavlegoat.github.io/about/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://gavlegoat.github.io/about/</guid>
-      <description>I am an assistant professor in the computer science department at Reed College. My research focuses on the intersection of program analysis and machine learning, especially with an eye toward ensuring the safety of machine learning systems. Specifically, my recent work has explored the use of neurosymbolic programming to develop agents which can interact safely with an environment.
-Prior to joining Reed, I earned my PhD at UT Austin&amp;rsquo;s UToPiA and Trishul groups, advised by Isil Dillig and Swarat Chaudhuri.</description>
-    </item>
-    
-    <item>
-      <title>Research</title>
-      <link>https://gavlegoat.github.io/research/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://gavlegoat.github.io/research/</guid>
-      <description>My research broadly covers the intersection of programming languages and machine learning. In particular, I am most interested in developing techniques for proving the safety of systems with machine learning components. My early work in this domain focused on using abstraction refinement to prove local robustness properties (PLDI&#39;19). More recently I have worked on incorporating ideas from PL research to develop a framework for deep reinforcement learning with formally guaranteed safety (NeurIPS&#39;20 and ICLR&#39;23).</description>
-    </item>
-    
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gavlegoat.github.io/teaching/cs342/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Final Project</title>
       <link>https://gavlegoat.github.io/teaching/cs342/final/</link>
@@ -100,18 +81,6 @@ Starter Code We provide some starter code for this homework here. This zip file 
       <description>In this first homework, you will be training a deep network to classify images from SuperTuxKart.
 This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
 Running on Google Colab For this assignment, as well as future assignments, you may want access to a GPU to train your models more quickly.</description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://gavlegoat.github.io/publications/</link>
-      <pubDate>Fri, 14 Jun 2019 11:06:23 -0500</pubDate>
-      
-      <guid>https://gavlegoat.github.io/publications/</guid>
-      <description>Policy Optimization with Robustness Certificates. Chenxi Yang, Greg Anderson, Swarat Chaudhuri.
-Guiding Safe Exploration with Weakest Preconditions. Greg Anderson, Swarat Chaudhuri, Isil Dillig. At ICLR &amp;lsquo;23. Tool available here.
-Neurosymbolic Reinforcement Learning with Formally Verified Exploration. Greg Anderson, Abhinav Verma, Isil Dillig, Swarat Chaudhuri. At NeurIPS &amp;lsquo;20. Tool available here.
-Optimization and Abstraction: A Synergistic Approach for Analyzing Neural Network Robustness. Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri. At PLDI&#39;19 (Distinguished Paper).</description>
     </item>
     
   </channel>

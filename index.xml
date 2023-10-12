@@ -88,7 +88,7 @@ This assignment, as with all of the homework assignments, should be completed in
       <description>For this homework, you will be classifying images from the SuperTuxKart dataset using a convolutional neural network.
 This assignment, as with all of the homework assignments, should be completed individually without sharing solutions, models, or ideas with other students. See details at the bottom of this page.
 Starter Code We provide some starter code for this homework here. This zip file contains the following:
- bundle.py, a script you can use to zip up your homework for submission.</description>
+bundle.py, a script you can use to zip up your homework for submission.</description>
     </item>
     
     <item>

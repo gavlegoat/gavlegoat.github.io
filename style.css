@@ -1,0 +1,38 @@
+:root {
+    --sidebar-width: 20em;
+}
+
+.sidebar {
+    height: 100%;
+    width: var(--sidebar-width);
+    position: fixed;
+    img.me {
+        max-width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+    a {
+        font-size: 18px;
+        display: block;
+        text-align: center;
+    }
+    background-color: #DDDDDD;
+    .icons {
+        margin-left: auto;
+        margin-right: auto;
+        img {
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+        }
+    }
+}
+
+.main {
+    margin-left: var(--sidebar-width);
+    width: 40em;
+    padding-left: 2em;
+}

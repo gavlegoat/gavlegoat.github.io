@@ -3,121 +3,119 @@
 <!-- TODO: Mobile? -->
 
 <head>
-    <title>Greg Anderson</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Greg Anderson</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
 
-    <div class="sidebar">
-        <img class="me" src="me.jpg" alt="A picture of Greg Anderson">
-        <a href="#">About</a><br>
-        <a href="#research">Research</a><br>
-        <a href="#teaching">Teaching</a><br>
-        <a href="#publications">Publications</a><br>
-        <div class="icons">
-            <a href="https://www.github.com/gavlegoat">
-                <img src="github.svg" alt="The GitHub Logo">
-            </a>
-            <a href="mailto:grega@reed.edu">
-                <img src="email.svg" alt="An email logo">
-            </a>
-        </div>
+  <div class="sidebar">
+    <img class="me" src="me.jpg" alt="A picture of Greg Anderson">
+    <a href="#">About</a><br>
+    <a href="#research">Research</a><br>
+    <a href="#teaching">Teaching</a><br>
+    <a href="#publications">Publications</a><br>
+    <div class="icons">
+      <a href="https://www.github.com/gavlegoat">
+        <img src="github.svg" alt="The GitHub Logo">
+      </a>
+      <a href="mailto:grega@reed.edu">
+        <img src="email.svg" alt="An email logo">
+      </a>
     </div>
+  </div>
 
-    <div class="main">
+  <div class="main">
 
-        <p>I am an assistant professor in the computer science department at
-            <a href="https://www.reed.edu">Reed College</a>. My research focuses
-            on the intersection of program analysis and machine learning,
-            especially with an eye toward ensuring the safety of machine learning
-            systems. Specifically, my recent work has explored the use of
-            neurosymbolic programming to develop agents which can interact safely
-            with an environment.</p>
+    <p>I am an assistant professor in the computer science department at
+      <a href="https://www.reed.edu">Reed College</a>. My research focuses
+      on the intersection of program analysis and machine learning,
+      especially with an eye toward ensuring the safety of machine learning
+      systems. Specifically, my recent work has explored the use of
+      neurosymbolic programming to develop agents which can interact safely
+      with an environment.</p>
 
-        <p>Prior to joining Reed, I earned my PhD at UT Austin, advised by
-            <a href="https://www.cs.utexas.edu/~isil">Isil Dillig</a> and
-            <a href="https://www.cs.utexas.edu/~swarat">Swarat Chaudhuri</a>.</p>
+    <p>Prior to joining Reed, I earned my PhD at UT Austin, advised by
+      <a href="https://www.cs.utexas.edu/~isil">Isil Dillig</a> and
+      <a href="https://www.cs.utexas.edu/~swarat">Swarat Chaudhuri</a>.</p>
 
-        <div id="research">
+    <div id="research">
 
-            <h1>Research</h1>
+      <h1>Research</h1>
 
-            <p>My research broadly covers the intersection of programming
-                languages and machine learning. In particular, I am most
-                interested in developing techniques for proving the safety of
-                systems with machine learning components. My early work in this
-                domain focused on using abstraction refinement to prove local
-                robustness properties (<a
-                    href="papers/charon-pldi-19.pdf">PLDI'19</a>). More recently
-                I have worked on incorporating ideas from PL research to
-                develop a framework for deep reinforcement learning with
-                formally guaranteed safety (<a
-                    href="papers/revel-neurips2020.pdf">NeurIPS'20</a> and <a
-                    href="papers/spice.pdf">ICLR'23</a>) and robustness (<a
-                    href="papers/carol.pdf">SaTML '24</a>).</p>
+      <p>My research broadly covers the intersection of programming
+        languages and machine learning. In particular, I am most
+        interested in developing techniques for proving the safety of
+        systems with machine learning components. My early work in this
+        domain focused on using abstraction refinement to prove local
+        robustness properties (<a href="papers/charon-pldi-19.pdf">PLDI'19</a>).
+        More recently I have worked on incorporating ideas from PL research to
+        develop a framework for deep reinforcement learning with formally
+        guaranteed safety (<a href="papers/revel-neurips2020.pdf">NeurIPS'20</a>
+        and <a href="papers/spice.pdf">ICLR'23</a>) and robustness
+        (<a href="papers/carol.pdf">SaTML '24</a>).</p>
 
-            <p>In addition, I have also done some work on using machine
-                learning to improve program analysis and program synthesis
-                tools. For example, the aformentioned PLDI paper used machine
-                learning to figure out how to perform abstraction refinement.
-                Before that I worked on a system which uses machine learning to
-                automatically learn appropriate predicates for a predicate
-                abstraction based synthesis tool (<a
-                    href="papers/atlas-cav-18">CAV'18</a>).</p>
+      <p>In addition, I have also done some work on using machine
+        learning to improve program analysis and program synthesis
+        tools. For example, the aformentioned PLDI paper used machine
+        learning to figure out how to perform abstraction refinement.
+        Before that I worked on a system which uses machine learning to
+        automatically learn appropriate predicates for a predicate
+        abstraction based synthesis tool
+        (<a href="papers/atlas-cav-18">CAV'18</a>).</p>
 
-        </div>
-        <div id="teaching">
-
-            <h1>Teaching</h1>
-
-            All classes were taught at Reed unless otherwise noted.
-
-            <ul>
-                <li>CSCI 121: Computer Science I (Fall 2024)</li>
-                <li>CSCI 221: Computer Science II (Fall 2023, Spring 2024, Spring 2025)</li>
-                <li>CSCI 378: Deep Learning (Spring 2024, Spring 2025)</li>
-                <li>CSCI 384: Programming Languages (Fall 2023)</li>
-                <li>CSCI 389: Computer Systems (Fall 2024)</li>
-                <li>(UT Austin) CS 342: Neural Networks (Spring 2022)</li>
-            </ul>
-
-        </div>
-        <div id="publications">
-
-            <h1>Publications</h1>
-
-            <ul>
-                <li><a href="papers/carol.pdf">Certifiably Robust Reinforcement
-                    Learning through Model-Based Abstract Interpretation</a>.
-                    Chenxi Yang, Greg Anderson, Swarat Chaudhuri. SatML
-                    '24.</li>
-                <li><a href="papers/spice.pdf">Guiding Safe Exploration with
-                    Weakest Preconditions</a>. Greg Anderson, Swarat Chaudhuri,
-                    Isil Dillig. At ICLR '23. Tool available <a
-                        href="https://github.com/gavlegoat/spice">here</a>.</li>
-                <li><a href="papers/revel-neurips2020.pdf">Neurosymbolic
-                    Reinforcement Learning with Formally Verified
-                    Exploration</a>. Greg Anderson, Abhinav Verma, Isil Dillig,
-                    Swarat Chaudhuri. At NeurIPS '20. Tool available <a
-                        href="https://github.com/gavlegoat/safe-learning">here
-                    </a>.</li>
-                <li><a href="papers/charon-pldi-19.pdf">Optimization and
-                    Abstraction: A Synergistic Approach for Analyzing Neural
-                    Network Robustness</a>. Greg Anderson, Shankara Pailoor,
-                    Isil Dillig, and Swarat Chaudhuri. At PLDI '19
-                    (Distinguished Paper). Tool available <a
-                        href="https://github.com/gavlegoat/charon">here</a>.</li>
-                <li><a href="papers/atlas-cav-18.pdf">Learning Abstractions for
-                    Program Synthesis</a>. Xinyu Wang, Greg Anderson, Isil
-                    Dillig, Ken McMillan. At CAV '18.</li>
-                <li>Formal Analysis of the Compact Position Reporting
-                    Algorithm. Aaron Dutle, Mariano Moscato, Laura Titolo,
-                    César Muñoz, Gregory Anderson, and François Bobot. Formal
-                    Aspects of Computing. '20.</li>
-            </ul>
-
-        </div>
     </div>
+    <div id="teaching">
+
+      <h1>Teaching</h1>
+
+      All classes were taught at Reed unless otherwise noted.
+
+      <ul>
+        <li>CSCI 121: Computer Science I (Fall 2024)</li>
+        <li>CSCI 221: Computer Science II (Fall 2023, Spring 2024, Spring 2025)</li>
+        <li>CSCI 378: Deep Learning (Spring 2024, Spring 2025)</li>
+        <li>CSCI 384: Programming Languages (Fall 2023)</li>
+        <li>CSCI 389: Computer Systems (Fall 2024)</li>
+        <li>(UT Austin) CS 342: Neural Networks (Spring 2022)</li>
+      </ul>
+
+    </div>
+    <div id="publications">
+
+      <h1>Publications</h1>
+
+      <ul>
+        <li>Robust Adaptive Multi-Step Predictive Shielding. Tanmay
+          Ambadkar, Darshan Chudiwal, Greg Anderson, Abhinav Verma. At ICLR
+          '26 (to appear).</li>
+        <li><a href="papers/carol.pdf">Certifiably Robust Reinforcement
+            Learning through Model-Based Abstract Interpretation</a>.
+          Chenxi Yang, Greg Anderson, Swarat Chaudhuri. SatML
+          '24.</li>
+        <li><a href="papers/spice.pdf">Guiding Safe Exploration with
+            Weakest Preconditions</a>. Greg Anderson, Swarat Chaudhuri,
+          Isil Dillig. At ICLR '23. Tool available
+          <a href="https://github.com/gavlegoat/spice">here</a>.</li>
+        <li><a href="papers/revel-neurips2020.pdf">Neurosymbolic Reinforcement
+            Learning with Formally Verified Exploration</a>. Greg Anderson,
+          Abhinav Verma, Isil Dillig, Swarat Chaudhuri. At NeurIPS '20. Tool
+          available
+          <a href="https://github.com/gavlegoat/safe-learning">here</a>.</li>
+        <li><a href="papers/charon-pldi-19.pdf">Optimization and Abstraction: A
+            Synergistic Approach for Analyzing Neural Network Robustness</a>.
+          Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri.
+          At PLDI '19 (Distinguished Paper). Tool available
+          <a href="https://github.com/gavlegoat/charon">here</a>.</li>
+        <li><a href="papers/atlas-cav-18.pdf">Learning Abstractions for Program
+            Synthesis</a>. Xinyu Wang, Greg Anderson, Isil Dillig, Ken
+          McMillan. At CAV '18.</li>
+        <li>Formal Analysis of the Compact Position Reporting Algorithm. Aaron
+          Dutle, Mariano Moscato, Laura Titolo, César Muñoz, Gregory Anderson,
+          and François Bobot. Formal Aspects of Computing. '20.</li>
+      </ul>
+
+    </div>
+  </div>
 
 </body>
